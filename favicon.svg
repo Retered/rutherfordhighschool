@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rutherford High School favicon">
+  <rect width="64" height="64" fill="#000000"/>
+
+  <g>
+    <circle cx="32" cy="32" r="24" fill="#F4D000" stroke="#1E3AF5" stroke-width="2"/>
+    <path d="M32 9 L50 15 L50 34 C50 45 41 53 32 56 C23 53 14 45 14 34 L14 15 Z" fill="#E31217" stroke="#1E3AF5" stroke-width="2"/>
+    <path d="M28 16 L36 16 L36 42 C36 48 34 51 32 53 C30 51 28 48 28 42 Z" fill="#1E3AF5"/>
+    <path d="M15 18 L23 18 L23 41 C23 46 19 50 15 52 Z" fill="#1E3AF5" opacity="0.15"/>
+    <path d="M41 18 L49 18 L49 41 C49 46 45 50 41 52 Z" fill="#1E3AF5" opacity="0.15"/>
+  </g>
+</svg>
