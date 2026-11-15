@@ -1,33 +1,33 @@
 document.documentElement.classList.add("js-enabled");
 
-const hero = document.querySelector(".hero");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const hero = document.querySelector(".hero");
 
 if (hero && !reduceMotion) {
-  const orbCount = 5;
-  for (let i = 0; i < orbCount; i += 1) {
+  for (let i = 0; i < 6; i += 1) {
     const orb = document.createElement("span");
+    const size = 115 + i * 32;
     orb.className = "orb";
-    const size = 120 + i * 35;
+    orb.setAttribute("aria-hidden", "true");
     orb.style.width = `${size}px`;
     orb.style.height = `${size}px`;
-    orb.style.left = `${8 + i * 18}%`;
-    orb.style.top = `${10 + (i % 3) * 24}%`;
-    orb.style.opacity = `${0.18 + i * 0.08}`;
-    orb.style.animationDelay = `${i * 0.6}s`;
+    orb.style.left = `${5 + i * 17}%`;
+    orb.style.top = `${12 + (i % 3) * 26}%`;
+    orb.style.opacity = `${0.12 + i * 0.035}`;
+    orb.style.animationDelay = `${i * -1.1}s`;
     hero.appendChild(orb);
   }
 }
 
 const animatedElements = document.querySelectorAll(
-  ".hero-content, main > .section, .card, .tips-list li"
+  ".hero-content, main > section, .story-copy, .story-panel, .article-block > p, .card, .tips-list li"
 );
 
 if (!reduceMotion && "IntersectionObserver" in window) {
   animatedElements.forEach((element, index) => {
     element.classList.add("reveal");
-    if (element.matches(".card, .tips-list li")) {
-      element.style.setProperty("--reveal-delay", `${index * 80}ms`);
+    if (element.matches(".card, .tips-list li, .article-block > p")) {
+      element.style.setProperty("--reveal-delay", `${(index % 5) * 90}ms`);
     }
   });
 
@@ -40,10 +40,13 @@ if (!reduceMotion && "IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.14, rootMargin: "0px 0px -25px 0px" }
+    { threshold: 0.12, rootMargin: "0px 0px -30px 0px" }
   );
 
   animatedElements.forEach((element) => revealObserver.observe(element));
 } else {
   animatedElements.forEach((element) => element.classList.add("is-visible"));
 }
+
+const intro = document.querySelector(".intro-overlay");
+if (intro && reduceMotion) intro.remove();
