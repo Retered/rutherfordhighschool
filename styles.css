@@ -57,6 +57,13 @@ body {
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   font-weight: 600;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: white;
+  transform: translateY(-2px);
 }
 
 .hero-content {
@@ -153,6 +160,12 @@ main {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.25rem;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(25, 58, 95, 0.1);
 }
 
 .card h3 {
@@ -173,6 +186,37 @@ main {
 
 .reflection {
   background: linear-gradient(135deg, #fff5ee 0%, #fffaf6 100%);
+}
+
+/* Reveal elements only when JavaScript is active so the page stays readable without it. */
+.js-enabled .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 650ms ease, transform 650ms cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.js-enabled .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js-enabled .reveal,
+  .js-enabled .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .nav-links a,
+  .card {
+    transition: none;
+  }
 }
 
 @media (max-width: 760px) {
