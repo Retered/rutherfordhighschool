@@ -3,97 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0b1d2c" />
-    <title>The Rutherford Times | Think Before You Post</title>
+    <title>The Rutherford Times</title>
+    <meta name="description" content="A student-written feature on digital citizenship and online responsibility." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="intro-overlay" aria-hidden="true">
-      <div class="intro-panel">
-        <span class="intro-kicker">Rutherford High School presents</span>
-        <h2>THE RUTHERFORD<br />TIMES</h2>
-        <div class="intro-line"></div>
-        <p>News • Voices • Digital Citizenship</p>
-      </div>
-    </div>
+    <header class="site-header">
+      <div class="topbar">
+        <div class="brand-lockup">
+          <span class="brand-mark">R</span>
+          <span class="brand-text">The Rutherford Times</span>
+        </div>
 
-    <header class="hero">
-      <nav class="topbar" aria-label="Main navigation">
-        <a class="brand" href="#top">The Rutherford Times</a>
-        <div class="nav-links">
+        <nav class="nav" aria-label="Main navigation">
           <a href="#story">Front page</a>
           <a href="#about">About</a>
           <a href="#examples">Examples</a>
           <a href="#tips">Tips</a>
-        </div>
-      </nav>
-
-      <div class="hero-content" id="top">
-        <p class="eyebrow"><span class="live-dot"></span> Special report <span>•</span> Student edition</p>
-        <h1>Think Before<br /><em>You Post.</em></h1>
-        <p class="subtitle">
-          One post can travel far beyond your screen. A special report on digital respect,
-          online responsibility, and the Harmful Digital Communications Act.
-        </p>
-        <p class="byline">Published by <strong>Braedyn Mannion</strong></p>
-        <a class="hero-cta" href="#story">Read the front-page story <span aria-hidden="true">↓</span></a>
+        </nav>
       </div>
-      <div class="hero-stamp" aria-hidden="true">READ<br />THINK<br />RESPECT</div>
-      <div class="hero-bottomline" aria-hidden="true"></div>
+
+      <div class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Rutherford High School • Student feature</p>
+          <h1>Think Before<br />You Post</h1>
+          <p class="subtitle">
+            A student feature looking at online responsibility, respectful communication,
+            and the impact of harmful digital behaviour.
+          </p>
+          <div class="byline-row">
+            <span>Published by <strong>Braedyn Mannion</strong></span>
+            <span class="divider"></span>
+            <span>Wednesday edition</span>
+          </div>
+          <a class="hero-button" href="#story">Read the article</a>
+        </div>
+      </div>
     </header>
 
     <main>
-      <section id="story" class="feature-section reveal" aria-labelledby="paper-title">
-        <div class="newspaper-header">
-          <span class="edition">Rutherford High School • Special report</span>
-          <h2 id="paper-title">The Rutherford Times</h2>
-          <span class="date">Digital citizenship edition</span>
+      <section id="story" class="feature reveal">
+        <div class="paper-header">
+          <span class="issue-tag">Local news</span>
+          <h2>The Rutherford Times</h2>
+          <span class="issue-date">Digital citizenship issue</span>
         </div>
 
-        <div class="story-grid">
+        <div class="feature-grid">
           <div class="story-copy">
-            <p class="story-tag"><span>01</span> The big story</p>
-            <h3>When a post leaves your screen, its impact can last.</h3>
-            <p class="story-deck">
-              The Harmful Digital Communications Act is a reminder that online actions affect real
-              people. Here’s what the law is for—and how every one of us can help make digital spaces safer.
+            <p class="story-label">Front page</p>
+            <h3>When a post leaves your screen, it can still hurt someone.</h3>
+            <p>
+              The Harmful Digital Communications Act exists to protect people from online bullying,
+              harassment, threats, humiliation, and the sharing of private information without consent.
+              It is a reminder that what happens online is not separate from real life.
+            </p>
+            <p>
+              Words can spread quickly. A comment, post, or image can affect someone’s confidence,
+              reputation, and wellbeing long after it was sent.
             </p>
             <div class="story-meta">
-              <span>By <strong>Braedyn Mannion</strong></span>
-              <span class="meta-divider" aria-hidden="true"></span>
-              <span>Student feature</span>
+              <span>By Braedyn Mannion</span>
+              <span>•</span>
+              <span>5 minute read</span>
             </div>
-            <div class="story-actions">
-              <a href="#article" class="primary-button">Read the full article <span aria-hidden="true">↘</span></a>
-            </div>
+            <a class="article-link" href="#article">Read the full article</a>
           </div>
 
-          <aside class="story-panel" aria-label="Key takeaways">
-            <p class="panel-label">The takeaway</p>
-            <p class="pull-quote">“Words online can hurt just as much as words spoken face to face.”</p>
-            <div class="panel-rule"></div>
+          <aside class="story-panel">
+            <p class="panel-title">The takeaway</p>
+            <blockquote>
+              “Words online can hurt just as much as words spoken face to face.”
+            </blockquote>
             <ul>
-              <li><span>01</span> Pause before posting</li>
-              <li><span>02</span> Respect privacy</li>
-              <li><span>03</span> Report harmful content</li>
+              <li>Pause before posting</li>
+              <li>Respect privacy</li>
+              <li>Report harmful content</li>
             </ul>
           </aside>
         </div>
 
-        <div id="article" class="article-block">
-          <div class="article-heading">
-            <span class="article-kicker">The full story</span>
-            <h4>Think Before You Post: Being a Safe Digital Citizen</h4>
-            <p>Published by <strong>Braedyn Mannion</strong></p>
+        <div id="article" class="article">
+          <div class="article-header">
+            <p class="article-kicker">The full story</p>
+            <h4>Think Before You Post</h4>
+            <p>Published by Braedyn Mannion</p>
           </div>
+
           <p>
             Good morning, everyone, and welcome to this blog post about the Harmful Digital
-            Communications Act 2015. Today, I want to explain what this law is, why it matters, and
-            how it connects to the way we use digital communication in our everyday lives.
+            Communications Act 2015. Today, I want to explain what this law is, why it matters,
+            and how it connects to the way we use digital communication in our everyday lives.
           </p>
           <p>
             The Harmful Digital Communications Act 2015 was created to protect people from harmful
@@ -124,7 +128,7 @@
           <p>
             One thing I could do to improve how I behave online is to pause before I respond when I feel
             angry or upset. Sometimes, in the heat of the moment, we send something we regret. Taking a
-            breath and thinking before we reply helps us be more thoughtful and responsible.
+            breath and thinking before I reply helps me be more thoughtful and responsible.
           </p>
           <p>
             In conclusion, the Harmful Digital Communications Act reminds us that the internet is not a
@@ -134,21 +138,23 @@
         </div>
       </section>
 
-      <section id="about" class="section intro reveal">
+      <section id="about" class="section reveal">
         <div class="section-title">
           <span>01</span>
           <h2>Why the Act matters</h2>
         </div>
         <div class="content-block">
           <p>
-            Digital communication is part of everyday life. We use messages, social media, gaming chats,
-            and online posts to connect with friends, family, and classmates. The Act was created to
-            protect people from online bullying, harassment, threats, humiliation, and sharing private
-            information without permission.
+            Good morning, everyone, and welcome to this discussion about the Harmful Digital
+            Communications Act 2015. This law matters because digital communication is such a big part
+            of our everyday life. We use messages, social media, gaming chats, and online posts to
+            connect with friends, family, and classmates.
           </p>
           <p>
-            It reminds us that what we say and post online can affect another person’s wellbeing,
-            confidence, and reputation. A screen doesn’t make the impact less real.
+            The Act was created to protect people from online bullying, harassment, threats,
+            humiliation, and the sharing of private information without permission. It reminds us that
+            what we say and post online can affect another person’s wellbeing, confidence, and
+            reputation.
           </p>
         </div>
       </section>
@@ -156,37 +162,39 @@
       <section id="examples" class="section highlight reveal">
         <div class="section-title">
           <span>02</span>
-          <h2>What harmful communication can look like</h2>
+          <h2>Examples of harmful digital communication</h2>
         </div>
 
         <div class="cards">
           <article class="card">
-            <span class="card-number">01 / MESSAGES</span>
-            <h3>Abusive messages</h3>
+            <p class="card-tag">Abusive messages</p>
+            <h3>Threats and hostility</h3>
             <p>Sending threatening, insulting, or repeated hostile messages to another person.</p>
           </article>
           <article class="card">
-            <span class="card-number">02 / PRIVACY</span>
-            <h3>Sharing private content</h3>
-            <p>Posting someone’s personal details, images, or private information without consent.</p>
+            <p class="card-tag">Private content</p>
+            <h3>Sharing without consent</h3>
+            <p>Posting personal details, intimate images, or private information without consent.</p>
           </article>
           <article class="card">
-            <span class="card-number">03 / REPUTATION</span>
-            <h3>Rumours and shaming</h3>
-            <p>Spreading lies or humiliating posts that can damage someone’s reputation.</p>
+            <p class="card-tag">Rumours</p>
+            <h3>Shaming and spreading lies</h3>
+            <p>Spreading embarrassing stories or false information that can damage someone’s reputation.</p>
           </article>
         </div>
+
         <p class="section-note">
-          These actions can cause emotional distress. If something harmful happens, seek support and
-          report the content rather than spreading it further.
+          These actions can cause emotional distress and long-term harm. Reporting harmful content and
+          supporting the person affected can help stop the damage from spreading.
         </p>
       </section>
 
-      <section id="tips" class="section tips-section reveal">
+      <section id="tips" class="section reveal">
         <div class="section-title">
           <span>03</span>
-          <h2>Five ways to make the internet safer</h2>
+          <h2>Five tips for being a safe and respectful digital citizen</h2>
         </div>
+
         <ol class="tips-list">
           <li><strong>Pause before you post.</strong> Ask yourself if your words are kind, fair, and necessary.</li>
           <li><strong>Respect privacy.</strong> Do not share personal information or images without permission.</li>
@@ -195,12 +203,46 @@
           <li><strong>Treat people online as you would face to face.</strong> Be respectful, even when you disagree.</li>
         </ol>
       </section>
-
-      <footer class="site-footer">
-        <span>The Rutherford Times</span>
-        <span>Published by Braedyn Mannion</span>
-        <a href="#top">Back to top ↑</a>
-      </footer>
     </main>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
